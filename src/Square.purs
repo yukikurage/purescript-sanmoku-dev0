@@ -1,8 +1,7 @@
 module Square
-  ( SquarePropsType,
-  squareComponent
-  )
-  where
+  ( SquarePropsType
+  , squareComponent
+  ) where
 
 import Prelude
 
@@ -17,7 +16,8 @@ import Web.HTML.Event.EventTypes (click)
 
 type SquarePropsType m =
   { onClick :: m Unit
-  , value :: Signal (Maybe SquareValue) }
+  , value :: Signal (Maybe SquareValue)
+  }
 
 squareComponent :: forall m. Component m => SquarePropsType m -> m Unit
 squareComponent { onClick, value } = do
